@@ -25,21 +25,19 @@ function drawBarsAround(set){
 
 let maxlength = 0
 
-for (let j=0; j < arr.length; j++){
-if (arr[j].length > maxlength){
-  maxlength = arr[j].length
+for (let j=0; j < arr.length; j++) {
+    if (arr[j].length > maxlength) {
+        maxlength = arr[j].length
+    }
 }
-}
-for (let i=0; i < arr.length; i++){
 
+console.log(drawTopBorder(maxlength));
 
-if (arr[i] === arr[0]){
-    console.log(drawTopBorder(maxlength) + '\n' +drawBarsAround(arr[0]))
-} else {
-    console.log(drawMiddleBorder(maxlength) + '\n' + drawBarsAround(arr[i]))
+for (let i=0; i < arr.length; i++) {
+    if (i !== 0) {
+        console.log(drawMiddleBorder(maxlength))
+    }
+    console.log(drawBarsAround(arr[i]))
 }
-if (i === arr.length-1){
 
-    console.log(drawBottomBorder(maxlength))
-}
-}
+console.log(drawBottomBorder(maxlength))
