@@ -22,18 +22,14 @@ function drawBarsAround(set){
     return '\u2503' + set + " ".repeat(maxlength - set.length) + '\u2503' 
 }
 
-function getMaxLength(array) {
-    let max = 0
 
-    for (let j=0; j < array.length; j++) {
-        if (array[j].length > maxlength) {
-            max = array[j].length
-        }
+let maxlength = 0
+
+for (let j=0; j < arr.length; j++) {
+    if (arr[j].length > maxlength) {
+        maxlength = arr[j].length
     }
-    return max;
 }
-
-let maxLength = getMaxLength(arr)
 
 console.log(drawTopBorder(maxlength));
 
@@ -45,5 +41,3 @@ for (let i=0; i < arr.length; i++) {
 }
 
 console.log(drawBottomBorder(maxlength))
-
-//https://pastebin.com/TMgYUGtA
