@@ -1,0 +1,28 @@
+<%- include('partials/header.ejs') %> 
+<!-- header -->
+<h1>Add New Cohort Here</h1>
+<form action="/cohorts/new" method="POST">
+  <h3>Logo URL</h3>
+  <input
+    type="text"
+    name="logoUrl"
+    id="logoUrl"
+    placeholder="eg. http://www.example.com/some.ping"
+  />
+  <h3>Name</h3>
+  <input
+    type="text"
+    name="name"
+    id="name"
+    placeholder="Flying Funks Are The Best"
+  />
+  <h3>Members</h3>
+  <input
+    type="text"
+    name="members"
+    id="members"
+    placeholder="Jon Snow, Akshay Nanda, Shurooq"
+  />
+  <input type="submit" value="submit" />
+</form>
+<%- include('partials/footer.ejs') %> 
