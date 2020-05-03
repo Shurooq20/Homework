@@ -1,0 +1,20 @@
+<%- include('partials/header.ejs') %> 
+<% cohorts.forEach(cohort => { %>
+    <div>
+      <img
+        src="<%= cohort.logoUrl %>"
+        alt=""
+        style="width: 100px ;height: 100px; border-radius: 100%"
+      />
+      <h3><%= cohort.name %></h3>
+    </div>
+    <div>
+      <p><%= cohort.members %></p>
+    </div>
+    <div>
+      <form action="/cohorts/<%=cohort.id%>" method="GET">
+        <input type="submit" value="Show Cohort"/>
+      </form>
+    </div>
+<% }) %>
+<%- include('partials/footer.ejs') %> 
